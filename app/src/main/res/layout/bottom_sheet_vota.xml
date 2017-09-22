@@ -24,20 +24,51 @@
         android:textStyle="bold"
         tools:text="Col·legi Pau del Clos" />
 
-    <TextView
-        android:id="@+id/txtAdresa"
-        style="@style/Body2"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="C/ Mendez Núñez s/n" />
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@+id/icnCalendari"
+            android:layout_toStartOf="@+id/icnCalendari">
+            <TextView
+                android:id="@+id/txtAdresa"
+                style="@style/Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="C/ Mendez Núñez s/n" />
 
-    <TextView
-        android:id="@+id/txtLocalitat"
-        style="@style/Body"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/grey_dark"
-        tools:text="Tarragona" />
+            <TextView
+                android:id="@+id/txtLocalitat"
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_dark"
+                tools:text="Tarragona" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/icnCalendari"
+            app:srcCompat="@drawable/ic_calendar"
+            android:tint="#999999">
+
+        </ImageView>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
